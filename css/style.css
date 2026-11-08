@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "MainFont";
+    src: url("../assets/fonts/font_main.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "AndrewFont";
+    src: url("../assets/fonts/font_andrew.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "JesseFont";
+    src: url("../assets/fonts/font_jesse.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TrevorFont";
+    src: url("../assets/fonts/font_trevor.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "TristanFont";
+    src: url("../assets/fonts/font_tristan.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base */
+:root {
+    --background: #ffffff;
+    --foreground: #222222;
+    --muted: #666666;
+    --accent: #3568d4;
+    --content-width: 1100px;
+    --font-size: 1.5rem;
+    --standard-horiz-pad: 5vw;
+}
+
+body {
+    font-family: "MainFont", Arial, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+/* Layout */
+.container {
+    width: min(90%, var(--content-width));
+    margin-inline: auto;
+}
+
+section {
+    padding-block: 2rem;
+    padding: 2rem var(--standard-horiz-pad);
+}
+
+p {
+    font-size: var(--font-size);
+    color: var(--muted);
+}
+
+/* Header */
+header {
+
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+nav {
+    width: 100%;
+    align-items: center;
+}
+
+.header-external-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 var(--standard-horiz-pad);
+    padding-top: 2rem;
+    /* flex-wrap: wrap; */
+}
+
+@media (max-width: 768px) {
+    .header-external-links {
+        padding: 0;
+        padding-top: 1rem;
+    }
+}
+
+.header-external-links img {
+    height: 64px;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    row-gap: 1.5rem;
+    column-gap: 0;
+    list-style: none;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.nav-links a {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+a {
+    color: var(--foreground);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    padding-block: 2rem;
+    color: var(--muted);
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        justify-content: center;
+        padding-block: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-gallery{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-gallery img {
+    height: auto;
+    display: block;
+    max-height: 35rem;
+    object-fit: contain;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: -20px;
+}
+
+.h2-decor {
+    display: block;
+    height: auto;
+    width: 14rem;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+}
+
+h3 {
+    font-weight: normal;
+    font-size: var(--font-size);
+    color: var(--muted);
+}
+
+.entry{
+    padding-block: 1rem;
+}
+
+.entry p{
+    padding-left: 10px;
+    line-height: normal;
+}
+
+.merch-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#videos {
+    justify-content: center;
+}
+
+.video-area {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.video-area iframe {
+    aspect-ratio: 16/9;
+    width: 100% !important;
+}
+
+/* lyrix */
+.andrew {
+    font-family: "AndrewFont", sans-serif;
+}
+.jesse {
+    font-family: "JesseFont", sans-serif;
+}
+.trevor {
+    font-family: "TrevorFont", sans-serif;
+}
+.tristan {
+    font-family: "TristanFont", sans-serif;
+}
+
+#lyrics .entry h3 {
+    font-size: 2rem;
+}
